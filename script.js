@@ -105,14 +105,16 @@ window.addEventListener("DOMContentLoaded", function () {
   let mensaje = `Candelaria Sabor y Sazón
 📆 ${fecha} - ${hora}
 ----------------------------------------------------------
-Hola, soy ${nombre}. Quiero hacer un pedido:
+Hola, quiero hacer un pedido:
 
-📦 Pedido:
-${detallePedido}Total pasteles: ${totalPasteles}
+📦 *Pedido:*
+👋🏼Nombre: *${nombre}.*
+*${detallePedido}*
 
-🏠 Dirección: ${direccion}
-📞 WhatsApp: ${telefono}
+🏠 *Dirección:* ${direccion}
+📞 *Teléfono:* ${telefono}
 ----------------------------------------------------------
+📋Total pasteles: *${totalPasteles}*
 💳 Pago: ${metodoPago}
 💰 Total + domicilio: $${valorTotal.toLocaleString("es-CO")}
 ----------------------------------------------------------`;
