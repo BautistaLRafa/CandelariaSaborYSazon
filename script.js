@@ -113,7 +113,7 @@ ${detallePedido}Total pasteles: ${totalPasteles}
 📞 WhatsApp: 3102622195
 ----------------------------------------------------------
 💳 Pago: ${metodoPago}
-💰 Total + domicilio: $${totalPesos.toLocaleString("es-CO")}
+💰 Total + domicilio: $${valorTotal.toLocaleString("es-CO")}
 ----------------------------------------------------------`;
 
     const url = `https://wa.me/573102622195?text=${encodeURIComponent(mensaje)}`;
