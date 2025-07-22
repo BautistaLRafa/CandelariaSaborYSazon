@@ -85,6 +85,7 @@ window.addEventListener("DOMContentLoaded", function () {
     // Construcción del mensaje de WhatsApp
     const nombre = formulario.nombre.value;
     const direccion = formulario.direccion.value;
+    const telefono = formulario.telefono.value;
     const metodoPago = formulario.metodoPago.value;
     const total = cantidades.cerdo + cantidades.pollo + cantidades.mixto;
     const valorTotal = total * precios.cerdo + precios.domicilio;
@@ -110,7 +111,7 @@ Hola, soy ${nombre}. Quiero hacer un pedido:
 ${detallePedido}Total pasteles: ${totalPasteles}
 
 🏠 Dirección: ${direccion}
-📞 WhatsApp: 3102622195
+📞 WhatsApp: ${telefono}
 ----------------------------------------------------------
 💳 Pago: ${metodoPago}
 💰 Total + domicilio: $${valorTotal.toLocaleString("es-CO")}
