@@ -97,26 +97,26 @@ window.addEventListener("DOMContentLoaded", function () {
 
   // Construcción dinámica del pedido
   let detallePedido = "";
-  if (cantidades.pollo > 0) detallePedido += `     🐔 Pastel de Pollo: ${cantidades.pollo}\n`;
-  if (cantidades.cerdo > 0) detallePedido += `     🐷 Pastel de Cerdo: ${cantidades.cerdo}\n`;
-  if (cantidades.mixto > 0) detallePedido += `     (🐔🐷) Pastel Mixto: ${cantidades.mixto}\n`;
+  if (cantidades.pollo > 0) detallePedido += `     *🐔 Pastel de Pollo: ${cantidades.pollo}*\n`;
+  if (cantidades.cerdo > 0) detallePedido += `     *🐷 Pastel de Cerdo: ${cantidades.cerdo}*\n`;
+  if (cantidades.mixto > 0) detallePedido += `     *🐔🐷 Pastel Mixto: ${cantidades.mixto}\n*`;
 
   // Mensaje final
-  let mensaje = `Candelaria Sabor y Sazón
+  let mensaje = `*Candelaria Sabor y Sazón*
 📆 ${fecha} - ${hora}
 ----------------------------------------------------------
 Hola, quiero hacer un pedido:
 
 📦 *Pedido:*
-👋🏼Nombre: *${nombre}.*
-*${detallePedido}*
+👋🏼Nombre: *${nombre}*
+${detallePedido}
 
 🏠 *Dirección:* ${direccion}
 📞 *Teléfono:* ${telefono}
 ----------------------------------------------------------
 📋Total pasteles: *${totalPasteles}*
-💳 Pago: ${metodoPago}
-💰 Total + domicilio: $${valorTotal.toLocaleString("es-CO")}
+💳 Pago: *${metodoPago}*
+💰 Total + domicilio: *$${valorTotal.toLocaleString("es-CO")}*
 ----------------------------------------------------------`;
 
     const url = `https://wa.me/573102622195?text=${encodeURIComponent(mensaje)}`;
