@@ -99,7 +99,7 @@ window.addEventListener("DOMContentLoaded", function () {
   let detallePedido = "";
   if (cantidades.pollo > 0) detallePedido += `     *🐔 Pastel de Pollo: ${cantidades.pollo}*\n`;
   if (cantidades.cerdo > 0) detallePedido += `     *🐷 Pastel de Cerdo: ${cantidades.cerdo}*\n`;
-  if (cantidades.mixto > 0) detallePedido += `     *🐔🐷 Pastel Mixto: ${cantidades.mixto}\n*`;
+  if (cantidades.mixto > 0) detallePedido += `     *🐔🐷 Pastel Mixto: ${cantidades.mixto}*\n`;
 
   // Mensaje final
   let mensaje = `*Candelaria Sabor y Sazón*
@@ -108,7 +108,7 @@ window.addEventListener("DOMContentLoaded", function () {
 Hola, quiero hacer un pedido:
 
 📦 *Pedido:*
-👋🏼Nombre: *${nombre}*
+👋🏼Nombre: *${nombre}.*
 ${detallePedido}
 
 🏠 *Dirección:* ${direccion}
