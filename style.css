@@ -232,3 +232,44 @@ button[type="submit"] {
   padding: 6px 0;
   font-size: 14px;
 }
+
+
+/* Anuncio inicial */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: url('fondo.webp') center/cover no-repeat;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 20px;
+}
+
+.anuncio {
+  background: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+  font-family: sans-serif;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+.anuncio .mensaje {
+  font-size: 16px;
+  color: #222;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.btnContinuar {
+  background-color: #ff9900;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
