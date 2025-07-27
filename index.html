@@ -9,6 +9,16 @@
 </head>
 <body>
 
+  <!-- Anuncio inicial -->
+ <div id="anuncioOverlay" class="overlay">
+   <div class="anuncio">
+     <div id="mensajeAnuncio" class="mensaje"></div>
+    <button id="btnContinuar" class="btnContinuar">Continuar</button>
+  </div>
+ </div>
+
+ <div id="contenidoPagina" style="display: none;">
+
  <!-- Barra de resumen -->
 <div class="barraResumen" id="resumenPasteles">
   <div class="itemResumen">🐷<br><strong id="resCerdo">0</strong></div>
@@ -101,7 +111,7 @@
     <h2>¡Gracias por tu pedido!</h2>
     <button id="volverInicio">Hacer otro pedido</button>
   </div>
-
+</div>
   <script src="script.js"></script>
 </body>
 </html>
