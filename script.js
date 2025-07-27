@@ -1,5 +1,47 @@
 // Espera a que el DOM esté listo
 window.addEventListener("DOMContentLoaded", function () {
+
+  // ANUNCIO INICIAL DE PEDIDOS
+const pedidosCerrados = false; // ← CAMBIA A true si ya no se aceptan más
+
+const overlay = document.getElementById("anuncioOverlay");
+const mensaje = document.getElementById("mensajeAnuncio");
+const botonContinuar = document.getElementById("btnContinuar");
+const contenidoPagina = document.getElementById("contenidoPagina");
+
+// Calcular fecha del próximo viernes
+const hoy = new Date();
+const diaActual = hoy.getDay();
+const diasParaViernes = (5 - diaActual + 7) % 7 || 7;
+const proximoViernes = new Date(hoy.setDate(hoy.getDate() + diasParaViernes));
+const fechaFormateada = proximoViernes.toLocaleDateString("es-CO", {
+  day: 'numeric',
+  month: 'long'
+});
+
+if (pedidosCerrados) {
+  mensaje.innerHTML = `
+    🚫 Ya hemos alcanzado el <strong>tope máximo de encargos</strong> para este viernes <strong>${fechaFormateada}</strong> 🚛<br><br>
+    🕐 ¡Gracias por tu interés! Te esperamos la proxima semana 🙌
+  `;
+  botonContinuar.style.display = "none";
+  contenidoPagina.style.display = "none";
+  overlay.style.display = "flex";
+} else {
+  mensaje.innerHTML = `
+    📢 <strong>¡Atención!</strong> Los pasteles de <strong>Candelaria - Sabor y Sazón</strong> se preparan por encargo 🍽️<br><br>
+    🗓️ Los próximos pasteles estarán listos para el <strong>${fechaFormateada}</strong>.<br><br>
+    ✅ Separa el tuyo con anticipación, ¡hay cupos limitados! 🛒
+  `;
+  overlay.style.display = "flex";
+
+  botonContinuar.addEventListener("click", () => {
+    overlay.style.display = "none";
+    contenidoPagina.style.display = "block";
+  });
+}
+// FIN ANUNCIO INICIAL DE PEDIDOS
+  
   const precios = {
     cerdo: 15000,
     pollo: 15000,
