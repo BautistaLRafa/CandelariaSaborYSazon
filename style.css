@@ -18,7 +18,7 @@ body {
 }
 
 .banner {
-  background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.7)), url('fondo.png') center/cover no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.7)), url('fondo.webp') center/cover no-repeat;
   height: 300px;
   display: flex;
   flex-direction: column;
