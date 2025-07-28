@@ -161,7 +161,7 @@ ${detallePedido}
 💰 Total + domicilio: *$${valorTotal.toLocaleString("es-CO")}*
 ----------------------------------------------------------`;
 
-    const url = `https://wa.me/573102622195?text=${encodeURIComponent(mensaje)}`;
+    const url = `https://wa.me/573202849245?text=${encodeURIComponent(mensaje)}`;
     window.open(url, "_blank");
 
     formulario.reset();
